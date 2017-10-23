@@ -171,26 +171,23 @@ function moveDodgerLeft() {
   window.requestAnimationFrame(step)
 }
 
-/*function moveDodgerRight() {
-  var leftNumbers = DODGER.style.left.replace('px', '')
-  var left = parseInt(leftNumbers, 10)
-  function step() {
-    DODGER.style.left = `${left + 4}px`
-    if (left < 360) {
-      window.requestAnimationFrame(step)
+function moveDodgerLeft() {
+  window.requestAnimationFrame(function() {
+    const right = positionToInteger(DODGER.style.right)
+    if (left > 0) {
+      DODGER.style.left = `${left - 4}px`
     }
-  }
-  window.requestAnimationFrame(step)
-}*/
+  })
+}
 
 function moveDodgerRight() {
   window.requestAnimationFrame(function() {
     const left = positionToInteger(DODGER.style.left)
-      if (left < 360) {
-        DODGER.style.left = `${left + 4}px`
-      }
-    })
-  }
+    if (left < 360) {
+      DODGER.style.left = `${left + 4}px`
+    }
+  })
+}
 
 
 /**
