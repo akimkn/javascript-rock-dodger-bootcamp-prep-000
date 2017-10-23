@@ -184,15 +184,14 @@ function moveDodgerLeft() {
 }*/
 
 function moveDodgerRight() {
-  const left = positionToInteger(DODGER.style.left)
-  function step() {
-    DODGER.style.left = `${left + 4}px`
-    if (left < 360) {
-      window.requestAnimationFrame(step)
-    }
+  window.requestAnimationFrame(function() {
+    const left = positionToInteger(DODGER.style.left)
+      if (left < 360) {
+        DODGER.style.left = `${left + 4}px`
+      }
+    })
   }
-  window.requestAnimationFrame(step)
-}
+
 
 /**
  * @param {string} p The position property
