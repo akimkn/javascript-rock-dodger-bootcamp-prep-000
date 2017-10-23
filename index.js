@@ -122,7 +122,7 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  clearInterval(gameInterval);
+  gameInterval = null;
   ROCKS = [];
   window.alert("YOU LOSE!");
   //DODGER.removeEventListener("keydown", function(e))
@@ -195,5 +195,4 @@ function start() {
   gameInterval = setInterval(function() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
   }, 1000)
-  window.gameInterval = gameInterval
 }
