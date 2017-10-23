@@ -124,23 +124,9 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval);
   ROCKS.forEach(function(rock) {rock.remove()})
-  document.removeEventListener('keydown', moveDodger)
+  window.removeEventListener('keydown', moveDodger)
 //  return alert("YOU LOSE!")
 }
-
-/*function rockSmooth() {
-  for (var i = 0; i < ROCKS.length; i++) {
-    var topNumbers = ROCKS[i].style.top.replace('px', '')
-    var rockTop = parseInt(topNumbers, 10)
-    function step() {
-      ROCKS[i].style.top = `${rockTop + 2}px`
-      if (top < 360) {
-        window.requestAnimationFrame(step)
-      }
-    }
-    window.requestAnimationFrame(step)
-  }
-}*/
 
 function moveDodger(e) {
   if (e.which > -1) {
