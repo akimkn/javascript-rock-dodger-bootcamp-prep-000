@@ -122,6 +122,9 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
+  gameInterval = setInterval(function() {
+    createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
+  }, 10000)
   clearInterval(gameInterval);
   ROCKS = [];
   window.alert("YOU LOSE!");
