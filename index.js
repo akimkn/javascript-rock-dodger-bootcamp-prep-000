@@ -62,7 +62,14 @@ function createRock(x) {
   var top = 0
   rock.style.top = top
 
-  GAME.appendChild(rock)
+  function step() {
+    GAME.appendChild(rock)
+    if (checkCollision(rock) == false) {
+      window.requestAnimationFrame(step)
+    }
+  }
+  window.requestAnimationFrame(step);
+  //GAME.appendChild(rock)
   const rockInterval = setInterval(moveRock, 100)
   /**
    * Now that we have a rock, we'll need to append
