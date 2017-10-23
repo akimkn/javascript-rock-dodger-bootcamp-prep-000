@@ -113,8 +113,8 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval)
-  ROCKS = [];
-  DODGER.removeEventListener('keydown', function(e))
+  //ROCKS = [];
+//  DODGER.removeEventListener('keydown', function(e))
   window.alert("YOU LOSE!");
 }
 
