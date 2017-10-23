@@ -147,15 +147,12 @@ function moveDodger(e) {
     //  e.preventDefault()
   //    e.preventPropagation()
       moveDodgerLeft()
-    }
   }
-  document.addEventListener('keydown', function(e) {
-     if (e.which === RIGHT_ARROW) {
+  if (e.which === RIGHT_ARROW) {
        //e.preventDefault()
        //e.preventPropagation()
       moveDodgerRight()
-    }
-  })
+  }
 }
 
 function moveDodgerLeft() {
