@@ -73,13 +73,19 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock() {
+    rock.style.top = `${top += 2}px`
+    if (checkCollision(rock)) {
+      endGame()
+    }
+  }
+  //function moveRock() {
     // implement me!
     // (use the comments below to guide you!)
     /**
      * If a rock collides with the DODGER,
      * we should call endGame()
      */
-     for (var i = 0; i < ROCKS.length; i++) {
+  /*   for (var i = 0; i < ROCKS.length; i++) {
        var topNumbers = ROCKS[i].style.top.replace('px', '')
        var rockTop = parseInt(topNumbers, 10)
        if (rockTop < 380) {
@@ -93,7 +99,7 @@ function createRock(x) {
        endGame()
      }
   }
-
+*/
   // We should kick of the animation of the rock around here
 
   // Add the rock to ROCKS so that we can remove all rocks
