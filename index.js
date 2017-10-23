@@ -148,7 +148,7 @@ function moveDodger(e) {
   //    e.preventPropagation()
       moveDodgerLeft()
     }
-  })
+  }
   document.addEventListener('keydown', function(e) {
      if (e.which === RIGHT_ARROW) {
        //e.preventDefault()
