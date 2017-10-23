@@ -115,8 +115,7 @@ function endGame() {
   clearInterval(gameInterval);
   ROCKS = [];
   window.alert("YOU LOSE!");
-  DODGER.removeEventListener("keydown", function(e))
-  window.alert("YOU LOSE!");
+  //DODGER.removeEventListener("keydown", function(e))
 }
 
 /*function rockSmooth() {
