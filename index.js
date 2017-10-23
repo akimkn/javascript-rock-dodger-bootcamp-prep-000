@@ -143,7 +143,7 @@ function endGame() {
 }*/
 
 function moveDodger(e) {
-  if (e.which === LEFT_ARROW || e.which === RIGHT_ARROW) {
+  if (e.which > 0) {
     e.preventDefault
     e.preventPropagation
   }
