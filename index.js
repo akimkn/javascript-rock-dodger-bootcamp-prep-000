@@ -197,5 +197,3 @@ function start() {
   }, 1000)
   window.gameInterval = gameInterval
 }
-
-window.gameInterval = gameInterval
